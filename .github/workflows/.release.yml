@@ -1,9 +1,13 @@
 name: Release CI
 
+# on:
+#   push:
+#     tags:
+#       - 'v*'
+
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [ main ]
 
 jobs:
   publish:
@@ -15,7 +19,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Build
-        run: ./build
+        run: |
+          pwd
+          ls
+          ./build
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
