@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  docker-cicd:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: docker-cicd:0.0.1
+    container_name: docker-cicd
+    hostname: docker-cicd
+    # environment:
+    #   USERNAME: zero
+    # ports:
+    #   - 80:80
+    volumes:
+      - ./output/:/opt/app/output/:rw
+    # healthcheck:
+    #   test: ["CMD-SHELL", "cqlsh"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 5
+
