@@ -13,9 +13,9 @@ services:
     # ports:
     #   - 80:80
     volumes:
-      - ./output/:/opt/app/output/:rw
+      - ./output/:/opt/app/output/
     # healthcheck:
-    #   test: ["CMD-SHELL", "cqlsh"]
+    #   test: ["CMD-SHELL", "gcc -v"]
     #   interval: 30s
     #   timeout: 10s
     #   retries: 5

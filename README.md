@@ -5,3 +5,9 @@ simple docker-compose file for build
 ```bash
 ./build
 ```
+
+## Release
+```bash
+git tag "v$VERSION"
+git push --tags
+```
