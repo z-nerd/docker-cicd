@@ -5,7 +5,8 @@ cd $APP_PATH
 pushd hello-zero
     gcc -o zero main.c
     # echo lfs | sudo -S cp zero $APP_PATH/output
-    cp zero $APP_PATH/output
+    tar -czvf zero.tar.gz zero
+    cp zero.tar.gz $APP_PATH/output
     chmod -R 777 $APP_PATH/output/
 popd
 echo "Done!"
